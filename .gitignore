@@ -1,0 +1,27 @@
+# Ignore Python/Django related files
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+media/
+
+# Ignore node_modules for React
+node_modules/
+build/
+dist/
+
+.DS_Store
+# Ignore Python/Django related files
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+media/
+
+# Ignore node_modules for React
+node_modules/
+build/
+.DS_Store
+
+# Ignore virtual environment
+proj_env/
