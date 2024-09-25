@@ -6,7 +6,7 @@ class Contact(models.Model):
     fullName = models.CharField(max_length = 250, blank=False, null = False)
     email= models.EmailField(blank=False, null=False)
     message = models.TextField(blank=False, null=False)
-    created = models.DateTimeField(db_default=Now())
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.fullName
@@ -30,3 +30,14 @@ class Game(models.Model):
 
     def __str__(self):
         return self.title
+
+class Event(models.Model):
+  title= models.CharField(max_length = 155)
+  description = models.TextField()
+  location = models.CharField(max_length = 155, blank=True, null=True); # to add online or offline event happening at some location
+  startDate = models.DateTimeField()
+  endDate = models.DateTimeField()
+  happenedStatus= models.BooleanField(default=False)
+
+  def __str__(self):
+    return self.title

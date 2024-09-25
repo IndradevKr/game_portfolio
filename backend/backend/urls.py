@@ -6,7 +6,8 @@ from game_admin import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/games/', views.games_list)
+    path('api/games/', views.games_list),
+    path('api/events/', views.events_list),
 ]
 
 if settings.DEBUG:
